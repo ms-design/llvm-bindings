@@ -19,8 +19,8 @@ on:
       - '**'
 
 env:
-  LLVM_VERSION: 12.0.0
-  LLVM_VERSION_MAJOR: 12
+  LLVM_VERSION: 13.0.0
+  LLVM_VERSION_MAJOR: 13
 
 jobs:
   build:
@@ -30,4 +30,4 @@ jobs:
         run: |
           brew install llvm@${{ env.LLVM_VERSION_MAJOR }}
           ls -l /usr/local/opt/llvm*
-          ls -l /usr/local/Cellar/llvm
+          ls -l /usr/local/Cellar/llvm*
