@@ -29,5 +29,5 @@ jobs:
       - name: Install LLVM on macOS
         run: |
           brew install llvm@${{ env.LLVM_VERSION_MAJOR }}
-          ll /usr/local/opt/llvm*
-          ll /usr/local/Cellar/llvm
+          ls -l /usr/local/opt/llvm*
+          ls -l /usr/local/Cellar/llvm
