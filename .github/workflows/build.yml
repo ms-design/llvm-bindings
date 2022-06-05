@@ -19,8 +19,8 @@ on:
       - '**'
 
 env:
-  LLVM_VERSION: 13.0.0
-  LLVM_VERSION_MAJOR: 13
+  LLVM_VERSION: 12.0.0
+  LLVM_VERSION_MAJOR: 12
 
 jobs:
   build:
@@ -29,5 +29,7 @@ jobs:
       - name: Install LLVM on macOS
         run: |
           brew install llvm@${{ env.LLVM_VERSION_MAJOR }}
-          ls -l /usr/local/opt/llvm*
-          ls -l /usr/local/Cellar/llvm*
+          cd /usr/local/opt/
+          ls -l
+          cd /usr/local/Cellar/
+          ls -l
